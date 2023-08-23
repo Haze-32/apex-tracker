@@ -1,16 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-import ApexStats from './components/apiCall'
+import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import { AuthProvider } from './utilities/AuthContext';
+import MainComponent from './components/main'
+
 
 
 
 
 function App() {
-  
+
   return (
-    <div className="App">      
-      <ApexStats />
-    </div>
+    <AuthProvider>
+      <div className="App">
+        <MainComponent />
+      </div>
+    </AuthProvider>
   );
 }
 

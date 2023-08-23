@@ -1,0 +1,149 @@
+.demoWrap {
+    background-image: url(https://i.ytimg.com/vi/Hm7a-HGusPg/maxresdefault.jpg);
+    background-size: cover;
+    font-family: 'Teko', sans-serif;
+    color: #fff;
+}
+
+.statBox {
+    width: 270px;
+    padding: 15px;
+    position: relative;
+}
+
+.statTitleWrap {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+}
+
+.statRow {
+    position: relative;
+    margin-bottom: 13px;
+    padding-bottom: 5px;
+    z-index: 5;
+}
+
+.statRow:before {
+    --s: 10px;
+    content: "";
+    width: 7px;
+    height: calc(100% - 20px);
+    background: #fff;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    clip-path: polygon(100% 0, 100% 100%, var(--s) 100%, 0 calc(100% - var(--s)), 0 0);
+}
+
+.statContent {
+    z-index: 6;
+    position: relative;
+    padding: 10px 10px 0 26px;
+    font-size: 22px;
+    line-height: 1;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+.statContentValue {
+    min-width: 90px;
+    font-size: 1.8rem;
+}
+
+.statRowBackground {
+    --b: 5px;
+    /* border */
+    --s: 15px;
+    /* size of the cut */
+    --s2: 30px;
+    /* size of the cut */
+    --c: #fff;
+
+    opacity: .5;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    position: absolute;
+
+    background: green;
+
+    border: var(--b) solid var(--c);
+    border-right: none;
+    border-radius: 0;
+
+    background: linear-gradient(45deg, var(--c) calc(0.707*var(--s) + var(--b)), #0000 0) border-box;
+    background-color: grey;
+
+    clip-path: polygon(100% 0, 100% 100%, var(--s) 100%, 0 calc(100% - var(--s)), 0 0);
+
+}
+
+
+
+
+
+
+
+
+.statBoxBackground {
+    --b: 5px;
+    /* border */
+    --s: 15px;
+    /* size of the cut */
+    --s2: 30px;
+    /* size of the cut */
+    --c: #fff;
+
+    position: absolute;
+
+
+    opacity: .5;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+
+    border: var(--b) solid var(--c);
+    border-radius: 0;
+
+    background: linear-gradient(-135deg, var(--c) calc(0.707*var(--s) + var(--b)), #0000 0) border-box,
+        linear-gradient(45deg, var(--c) calc(0.707*var(--s2) + var(--b)), #0000 0) border-box;
+    background-color: #000;
+
+    clip-path: polygon(0 0, calc(100% - var(--s)) 0, 100% var(--s), 100% 100%, var(--s2) 100%, 0 calc(100% - var(--s2)));
+
+}
+
+.rankStat {
+    display: flex;
+    align-items: center;
+}
+
+.legendTitle {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+.legendName {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1;
+}
+
+.rankStat img {
+    max-width: 58px;
+    margin-top: -31px;
+    margin-left: 8px;
+}
